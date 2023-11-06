@@ -6,17 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2023/9 | luzhijian的博客</title>
+  <title>走进Linux | luzhijian的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="努力学习！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="luzhijian的博客">
-<meta property="og:url" content="http://example.com/archives/2023/09/index.html">
+  <meta name="description" content="文件管理1、Linux目录结构简洁 Windows：以多根的方式组织文件C:\ D:\ E:\ Linux：以单根的方式组织文件 &#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="走进Linux">
+<meta property="og:url" content="http://example.com/2023/11/06/Linux%E5%AD%A6%E4%B9%A0/2%E3%80%81%E6%96%87%E4%BB%B6%E5%92%8C%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/index.html">
 <meta property="og:site_name" content="luzhijian的博客">
-<meta property="og:description" content="努力学习！">
+<meta property="og:description" content="文件管理1、Linux目录结构简洁 Windows：以多根的方式组织文件C:\ D:\ E:\ Linux：以单根的方式组织文件 &#x2F;">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-11-06T15:33:31.204Z">
+<meta property="article:modified_time" content="2023-11-06T16:17:52.244Z">
 <meta property="article:author" content="luzhijian">
-<meta property="article:tag" content="后端,运维,程序猿">
+<meta property="article:tag" content="运维">
+<meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="luzhijian的博客" type="application/atom+xml">
@@ -141,64 +144,159 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Linux学习/2、文件和用户管理" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/09/25/test/" class="archive-article-date">
-  	<time datetime="2023-09-24T16:58:24.943Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-09-25</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/09/25/test/">test</a>
+    <h1 class="article-title" itemprop="name">
+      走进Linux
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2023/11/06/Linux%E5%AD%A6%E4%B9%A0/2%E3%80%81%E6%96%87%E4%BB%B6%E5%92%8C%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86/" class="archive-article-date">
+  	<time datetime="2023-11-06T15:33:31.204Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-11-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h3 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h3><p>1、Linux目录结构简洁</p>
+<p>Windows：以多根的方式组织文件C:\ D:\ E:\</p>
+<p>Linux：以单根的方式组织文件 &#x2F;</p>
+<span id="more"></span>
+
+<p>2、Linux目录结构视图</p>
+<ul>
+<li>&#x2F;： 根目录</li>
+<li>&#x2F;bin：Binaries的缩写。 这个目录存放着最经常使用的命令。</li>
+<li>&#x2F;boot：这里存放的是启动Linux时使用的一些核心文件，包括一些连接文件以及镜像文件。</li>
+<li>&#x2F;dev ： Device的缩写。 存放的是Linux的外部设备，在Linux中访问设备的方式和访问文件的方式是相同的。</li>
+<li>&#x2F;etc： 初期etc的英文名全称为etcetera ，后来大家更习惯称为 Editable Text Configuration。这个目录用来存放所有的系统管理所需要的配置文件和子目录。</li>
+<li>&#x2F;home：用户的主目录，在Linux中，每个用户都有一个自己的目录，一般该目录名是以用户的账号命名的。</li>
+<li>&#x2F;lib：Library的缩写。这个目录里存放着系统最基本的动态连接共享库，其作用类似于Windows里的DLL文件。</li>
+<li>&#x2F;lost+found：这个目录一般情况下是空的，当系统非法关机后，这里就存放了一些文件。</li>
+<li>&#x2F;media：linux系统会自动识别一些设备，例如U盘、光驱等等，当识别后，linux会把识别的设备挂载到这个目录下。</li>
+<li>&#x2F;mnt：Mount的缩写。 系统提供该目录是为了让用户临时挂载别的文件系统的，我们可以将光驱挂载在&#x2F;mnt&#x2F;上，然后进入该目录就可以查看光驱里的内容了。</li>
+<li>&#x2F;opt：Optional（可选择的）的缩写。这是给主机额外安装软件所摆放的目录。比如你安装一个ORACLE数据库则就可以放到这个目录下。默认是空的。</li>
+<li>&#x2F;proc：process的缩写。这个目录是一个虚拟的目录，它是系统内存的映射，我们可以通过直接访问这个目录来获取系统信息。</li>
+<li>&#x2F;root：该目录为系统管理员，也称作超级权限者的用户主目录。</li>
+<li>&#x2F;sbin：Superuser binaries的缩写。这里存放的是系统管理员使用的系统管理程序。</li>
+<li>&#x2F;srv：Service的缩写。该目录存放一些服务启动之后需要提取的数据。</li>
+<li>&#x2F;sys：System的缩写。这是linux2.6内核的一个很大的变化。该目录下安装了2.6内核中新出现的一个文件系统 sysfs 。</li>
+<li>&#x2F;tmp：Temporary的缩写。这个目录是用来存放一些临时文件的。</li>
+<li>&#x2F;usr：Unix Software Resource的缩写。这是一个非常重要的目录，用户的很多应用程序和文件都放在这个目录下，类似于windows下的program files目录。</li>
+<li>&#x2F;usr&#x2F;bin： 系统用户使用的应用程序。</li>
+<li>&#x2F;usr&#x2F;sbin： 超级用户使用的比较高级的管理程序和系统守护程序。</li>
+<li>&#x2F;usr&#x2F;src： 内核源代码默认的放置目录。</li>
+<li>&#x2F;var：variable的缩写。这个目录中存放着在不断扩充着的东西，我们习惯将那些经常被修改的目录放在这个目录下。包括各种日志文件。</li>
+<li>&#x2F;run：是一个临时文件系统，存储系统启动以来的信息。当系统重启时，这个目录下的文件应该被删掉或清除。</li>
+</ul>
+<p>3、文件类型</p>
+<ul>
+<li>常见类型：<ul>
+<li>- 普通文件（文本文件、二进制文件、压缩文件、电源、图片）</li>
+<li>d 目录文件</li>
+</ul>
+</li>
+<li>非常见类型<ul>
+<li>b 设备文件（块设备）存储设备硬盘，U盘 &#x2F;dev&#x2F;sda</li>
+<li>c 设备文件（字符设备）打印机，终端 &#x2F;dev&#x2F;tty1</li>
+<li>l 链接文件</li>
+<li>s 套接字文件</li>
+<li>p 管道文件</li>
+</ul>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">运维</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">测试</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2023/10/31/Linux%E5%AD%A6%E4%B9%A0/1%E3%80%81%E8%B5%B0%E8%BF%9BLinux/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">走进Linux</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86"><span class="toc-number">1.</span> <span class="toc-text">文件管理</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -221,8 +319,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
@@ -281,14 +379,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">测试</a>
-              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">运维</a>
